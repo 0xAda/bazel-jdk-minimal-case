@@ -8,5 +8,6 @@ build --java_language_version=8
 build --tool_java_runtime_version=openjdk_8
 build --tool_java_language_version=8
 common --announce_rc
+build --javacopt="-Werror"
 
 test --test_output=errors
