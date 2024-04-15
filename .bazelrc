@@ -1,0 +1,12 @@
+build --local_resources=cpu=HOST_CPUS-2
+startup --host_jvm_args=-Xmx4G
+
+build --toolchain_resolution_debug='@@bazel_tools//tools/jdk:runtime_toolchain_type
+
+build --java_runtime_version=openjdk_8
+build --java_language_version=8
+build --tool_java_runtime_version=openjdk_8
+build --tool_java_language_version=8
+common --announce_rc
+
+test --test_output=errors
